@@ -9,7 +9,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (email === "admin@example.com" && password === "password") {
+    if (email !== "" && password === "password") {
       navigate("/home");
     } else {
       alert("Invalid Credentials");
@@ -18,6 +18,7 @@ const Login = () => {
 
   return (
     <div className="login-container">
+        <div className="box">
       <form onSubmit={handleSubmit} className="login-form">
         <h2>Login</h2>
         <input
@@ -36,6 +37,7 @@ const Login = () => {
         />
         <button type="submit">Login</button>
       </form>
+      </div>
     </div>
   );
 };
